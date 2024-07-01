@@ -1,2 +1,8 @@
 *~
 *.class
+data/
+output/
+build/
+.gradle/
+bin/
+
