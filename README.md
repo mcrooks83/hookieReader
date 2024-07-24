@@ -2,6 +2,14 @@
 
 Released with the Creative Commons BY license (https://creativecommons.org/licenses/by/4.0).
 
+## DATA
+
+data for 4 participants that have similar data labels were used to test 
+each participant was given a number 1-4
+flight data had multiple directories so one was chosen that was in close proximity to all participants
+each directory before_flight, flight and recovery contains all .dat files
+
+
 ## COMPILE
 ensure gradle is installed and the path variables set (see online documentation)
 Use gradle to compile (from command line in this folder)
