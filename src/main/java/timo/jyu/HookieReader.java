@@ -32,11 +32,10 @@ public class HookieReader{
 	public SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",new Locale("fi", "FI"));
 	
 	public static void main(String[] a){
-		new HookieReader(a[0],a[1],a[2]);
+		new HookieReader(a[0],a[1],a[2], a[3]);
 	}
 	
-	public HookieReader(String path, String fName, String targetPath){
-		
+	public HookieReader(String path, String p_num, String fName, String targetPath){
 		//File name output
 		FileWriter fstream = null;
 		BufferedWriter out = null; 
@@ -45,7 +44,7 @@ public class HookieReader{
 		//Open outputfile
 		try{
 			//File name output
-			fstream = new FileWriter(targetPath+fName+".csv");
+			fstream = new FileWriter(targetPath+p_num+ "_" + fName+".csv");
 			out = new BufferedWriter(fstream);
 			out.write("tStamp,X,Y,Z,FileName,pointer\n");
 		}catch(Exception e){
@@ -53,7 +52,7 @@ public class HookieReader{
 		}
 		
 		//List files in folder, and loop through .dat files to get the whole data
-		File folder = new File(path+fName);
+		File folder = new File(path+p_num+ "/" + fName);
 		File[] listOfFiles = folder.listFiles(new FilenameFilter(){
 			@Override
 			public boolean accept(File dir, String name){
