@@ -8,6 +8,7 @@ data for 4 participants that have similar data labels were used to test
 each participant was given a number 1-4
 flight data had multiple directories so one was chosen that was in close proximity to all participants
 each directory before_flight, flight and recovery contains all .dat files
+data is locaated on level up to this directory (4_cosmo)
 
 
 ## COMPILE
